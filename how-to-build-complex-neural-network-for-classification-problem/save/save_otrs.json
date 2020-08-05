@@ -1,0 +1,29 @@
+{
+    "best_score": 87.74495045344035,
+    "layers": [
+        {
+            "type": "POSITION_EMBEDDING",
+            "input_dim": 46599,
+            "output_dim": 288,
+            "input_length": 412
+        },
+        {
+            "type": "CNN_1D",
+            "activation": "relu",
+            "kernel_size": 7,
+            "num_filters": 128
+        },
+        {
+            "type": "DROPOUT",
+            "dropout": 0.5
+        },
+        {
+            "type": "GLOBAL"
+        },
+        {
+            "type": "DENSE",
+            "neurons": 11,
+            "activation": "softmax"
+        }
+    ]
+}
