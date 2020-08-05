@@ -1,0 +1,51 @@
+{
+    "input_length" : {        
+        "pad_maxlen" : 5000,
+        "pad_maxlen_cover" : 0.99,
+        "pad_maxlen_min" : 100,
+        "pad_maxlen_step" : 50
+    },
+    "embedding" :{
+        "tokenizer" : "simple",
+        "num_words" : 200000,
+        "start_output_dim" : 32,
+        "end_output_dim" : 304,
+        "increase_embedding_dim" : 16
+    },
+    "gf" : {
+        "dropouts" : [            
+            1.0,
+            0.5
+        ]
+    },
+    "cnn_1d" : {        
+        "activation" : "relu",
+        "min_num_filters" : 32,
+        "min_kernel_size" : 3,        
+        "max_num_filters" : 128,
+        "max_kernel_size" : 7,
+        "increase_num_filters" : 16,  
+        "increase_kernel_size" : 2,
+        "max_pooling_size" : 2,
+        "max_pooling_strides" : 1,
+        "level_cnn" : 3,
+        "level_max_pool" : 3,
+        "dropouts" : [            
+            1.0,
+            0.5
+        ]
+    },
+    "bilstm" : {
+        "dropouts" : [                        
+            0.3,
+            0.5,         
+            1.0
+        ]
+    },
+    "dense" :{
+        "dropouts" : [
+            0.5,         
+            1.0
+        ]
+    }
+}
